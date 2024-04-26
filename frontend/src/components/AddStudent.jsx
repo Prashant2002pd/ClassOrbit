@@ -34,7 +34,7 @@ export function AddStudent(){
                     gender:gender
                     
                 }
-                axios.post('https://class-orbit-frontend.vercel.app/student',data)
+                axios.post('https://class-orbit.vercel.app/student',data)
                 .then((res)=>{
                     if(res.status==201){
                         alert("Successfully added!")
