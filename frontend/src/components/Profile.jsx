@@ -170,7 +170,7 @@ function Fees({ student }) {
 
     function handilClick(_id){
     
-        axios.post('http://localhost:3001/Fees',{id:_id,month:monthName,paid:true}).
+        axios.post('https://class-orbit-frontend.vercel.app/Fees',{id:_id,month:monthName,paid:true}).
         then(()=>{
             navigate('/Students')
         })

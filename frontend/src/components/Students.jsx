@@ -8,7 +8,7 @@ export function Students(){
     const navigate = useNavigate();
 const  [students, setStudents] = useState([])
     useEffect( () => {
-        axios.get('http://localhost:3001').then((res)=>{
+        axios.get('https://class-orbit-frontend.vercel.app/').then((res)=>{
               
                 if(res.status==200){
                    setStudents(res.data)

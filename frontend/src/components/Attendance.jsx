@@ -5,7 +5,7 @@ import { Switch, button } from "@material-tailwind/react";
 export function Attendance(){
 const  [students, setStudents] = useState([])
     useEffect( () => {
-        axios.get('http://localhost:3001').then((res)=>{
+        axios.get('https://class-orbit-frontend.vercel.app/').then((res)=>{
                 
                 if(res.status==200){
                    setStudents(res.data)
@@ -36,7 +36,7 @@ const  [students, setStudents] = useState([])
 
 const sendAttendance = async (studentId, status) => {
     try {
-        await axios.post('http://localhost:3001/attnedance', {
+        await axios.post('https://class-orbit-frontend.vercel.app/attnedance', {
             studentId: studentId,
             isPresent: status
         }).then((data)=>{
